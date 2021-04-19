@@ -176,6 +176,8 @@ namespace DNS_Client
 
                 }
             }
+            
+         sock.Close();
 
         }
 
