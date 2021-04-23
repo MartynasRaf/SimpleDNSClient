@@ -181,65 +181,6 @@ namespace DNS_Client
 
         }
 
-        public static string ByteArrayToAddressString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-
-
-            foreach (byte b in ba)
-            {
-                    hex.AppendFormat("{0}.", b);
-
-            }
-
-            hex.Remove(hex.Length - 1,1);
-
-
-            return hex.ToString();
-        }
-
-
-        public static string ByteArrayToString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-            int i = 0;
-
-            int temp = 0;
-
-            foreach (byte b in ba)
-            {
-
-
-
-                    if (i % 2 == 0)
-                    {
-                        hex.AppendFormat("0x{0:x2}", b);
-                        temp = b;
-                    }
-                    else
-                    {
-                        hex.AppendFormat("{0:x2} {1}.{0} \n", b, temp);
-                    }
-
-                
-                i++;
-            }
-
-
-
-            return hex.ToString();
-        }
-
-        public static string stringToAsciiBytes(string hostName)
-        {
-
-
-
-
-
-            return null;
-        }
-
         struct Question
         {
             public string qName;
